@@ -1,0 +1,25 @@
+﻿@using EntityLayer
+@model List<OgretimUyesi>
+    
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+
+        <th>Id </th>
+        <th>İsim </th>
+        <th>Soyİsim </th>
+        <th>Eposta </th>
+    </tr>
+    @foreach (var x in Model)
+    {
+      <tr>
+      <td>@x.OgretimUyesiID</td>
+      <td>@x.Isim</td>
+      <td>@x.Soyisim</td>
+      <td>@x.EPosta</td>
+      </tr>
+    }
+</table>
